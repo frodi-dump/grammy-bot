@@ -1,0 +1,38 @@
+{
+  "name": "grammy-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node -r tsconfig-paths/register src/index",
+    "start:dev": "nodemon",
+    "build:dev": "tsc && tsc-alias",
+    "build": "rimraf dist && tsc -p tsconfig.prod.json && tsc-alias -p tsconfig.prod.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-perfectionist": "^2.5.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^3.2.2",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.8",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@grammyjs/runner": "^2.0.3",
+    "dotenv": "^16.3.1",
+    "env-var": "^7.4.1",
+    "grammy": "^1.20.3"
+  }
+}
