@@ -4,8 +4,11 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "ts-node -r tsconfig-paths/register src/index",
-    "start:dev": "nodemon",
+    "lint": "eslint \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "dev": "nodemon",
+    "start": "tsx -r tsconfig-paths/register src/index",
+    "start:force": "node .",
     "build:dev": "tsc && tsc-alias",
     "build": "rimraf dist && tsc -p tsconfig.prod.json && tsc-alias -p tsconfig.prod.json"
   },
@@ -27,12 +30,14 @@
     "ts-node": "^10.9.2",
     "tsc-alias": "^1.8.8",
     "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.7.0",
     "typescript": "^5.3.3"
   },
   "dependencies": {
     "@grammyjs/runner": "^2.0.3",
     "dotenv": "^16.3.1",
     "env-var": "^7.4.1",
-    "grammy": "^1.20.3"
+    "grammy": "^1.20.3",
+    "valibot": "^0.28.0"
   }
 }
