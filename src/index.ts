@@ -1,21 +1,32 @@
 import { config } from 'config'
 import { Bot } from 'grammy'
 import { run } from '@grammyjs/runner'
+import { logger } from 'logger'
 
-// Create an instance of the `Bot` class and pass your bot token to it.
-const bot = new Bot(config.BOT_TOKEN) // <-- put your bot token between the ""
+const startBot = async () => {
+  const bot = new Bot(config.BOT_TOKEN)
 
-// You can now register listeners on your bot object `bot`.
-// grammY will call the listeners when users send messages to your bot.
+  bot.command('start', ctx => ctx.reply('Welcome! Up and running.'))
 
-// Handle the /start command.
-bot.command('start', ctx => ctx.reply('Welcome! Up and running.'))
+  bot.on('message', ctx => ctx.reply('Got another message!'))
 
-// Handle other messages.
-bot.on('message', ctx => ctx.reply('Got another message!'))
+  await bot.init()
 
-// Now that you specified how to handle messages, you can start your bot.
-// This will connect to the Telegram servers and wait for messages.
+  logger.info({
+    msg: 'bot running...',
+    username: bot.botInfo.username,
+  })
 
-// Start the bot.
-run(bot)
+  return run(bot)
+}
+
+startBot()
+  .then(runner => {
+    const stopRunner = () => {
+      logger.info('shutdown')
+      return runner.isRunning() && runner.stop()
+    }
+    process.once('SIGINT', stopRunner)
+    process.once('SIGTERM', stopRunner)
+  })
+  .catch(logger.error)
