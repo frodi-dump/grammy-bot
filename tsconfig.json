@@ -4,7 +4,7 @@
     "module": "CommonJS",
     "moduleResolution": "node",
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": ".",
     "lib": ["esnext"],
     "sourceMap": true,
     "strict": true,
@@ -14,12 +14,8 @@
     "resolveJsonModule": true,
     "baseUrl": "src",
     "paths": {
-      "~": ["src"]
+      "@root": ["src"]
     }
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist"],
-  "ts-node": {
-    "transpileOnly": true
-  }
+  "include": ["src/**/*.ts"]
 }
