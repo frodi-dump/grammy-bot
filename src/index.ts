@@ -1,24 +1,5 @@
-import { config } from 'config';
-import { Bot } from 'grammy';
-import { run } from '@grammyjs/runner';
 import { logger } from 'logger';
-
-const startBot = async () => {
-  const bot = new Bot(config.BOT_TOKEN);
-
-  bot.command('start', ctx => ctx.reply('Welcome! Up and running.'));
-
-  bot.on('message', ctx => ctx.reply('Got another message!'));
-
-  await bot.init();
-
-  logger.info({
-    msg: 'bot running...',
-    username: bot.botInfo.username,
-  });
-
-  return run(bot);
-};
+import { startBot } from 'bot';
 
 startBot()
   .then(runner => {
