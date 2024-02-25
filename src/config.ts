@@ -1,5 +1,4 @@
 import 'dotenv/config';
-import env from 'env-var';
 import * as v from 'valibot';
 
 const configSchema = v.object({
@@ -13,16 +12,13 @@ const configSchema = v.object({
   DEVS: v.array(v.number()),
 });
 
-const Env = {
-  NODE_ENV: env.get('NODE_ENV').required().asString(),
-  ADMINS: env.get('ADMINS').required().asJsonArray() as number[],
-  DEVS: env.get('DEVS').required().asJsonArray() as number[],
-  LOG_LEVEL: env.get('LOG_LEVEL').required().asString(),
-  BOT_TOKEN: env.get('BOT_TOKEN').required().asString(),
-};
-
 const parseConfig = () => {
-  const config = v.parse(configSchema, Env);
+  const env = {
+    ...process.env,
+    ...{ ADMINS: JSON.parse(process.env.ADMINS!), DEVS: JSON.parse(process.env.DEVS!) },
+  };
+
+  const config = v.parse(configSchema, env);
 
   return {
     ...config,
