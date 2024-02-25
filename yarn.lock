@@ -786,11 +786,6 @@ end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-env-var@^7.4.1:
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/env-var/-/env-var-7.4.1.tgz#88af75fe16cc11031000f88d4777802c6958a01c"
-  integrity sha512-H8Ga2SbXTQwt6MKEawWSvmxoH1+J6bnAXkuyE7eDvbGmrhIL2i+XGjzGM3DFHcJu8GY1zY9/AnBJY8uGQYPHiw==
-
 es-abstract@^1.22.1, es-abstract@^1.22.3:
   version "1.22.3"
   resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.22.3.tgz#48e79f5573198de6dee3589195727f4f74bc4f32"
@@ -2194,6 +2189,7 @@ split2@^4.0.0:
   integrity sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
