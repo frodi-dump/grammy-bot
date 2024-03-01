@@ -1,10 +1,6 @@
 # Telegram Bot Template
 
----
-
 ## Usage
-
----
 
 Follow these steps to set up and run your bot using this template:
 
