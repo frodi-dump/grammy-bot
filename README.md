@@ -1,12 +1,14 @@
 # Telegram Bot Template
 
+Bot starter template based on [grammY](https://grammy.dev) bot framework.
+
 ## Usage
 
 Follow these steps to set up and run your bot using this template:
 
 Create a New Repository
 
-Start by creating a new repository using this template. You can do this by clicking [here](https://github.com/new?template_name=grammy-bot&template_owner=base-bot).
+Start by creating a new repository using this template. You can do this by clicking [here](https://github.com/new?template_name=grammy-bot&template_owner=base-bots).
 
 Environment Variables Setup
 
