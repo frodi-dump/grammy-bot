@@ -1,6 +1,6 @@
-import { Api, Context, SessionFlavor } from 'grammy';
-import { Update, UserFromGetMe } from 'grammy/types';
-import { Logger } from 'logger';
+import { type Api, Context, type SessionFlavor } from 'grammy';
+import type { Update, UserFromGetMe } from 'grammy/types';
+import type { Logger } from 'logger';
 
 export type SessionData = {
   // field?: string;
@@ -27,5 +27,9 @@ export function createContextConstructor({ logger }: Dependencies) {
         update_id: this.update.update_id,
       });
     }
-  } as unknown as new (update: Update, api: Api, me: UserFromGetMe) => MyContext;
+  } as unknown as new (
+    update: Update,
+    api: Api,
+    me: UserFromGetMe,
+  ) => MyContext;
 }

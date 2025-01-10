@@ -1,1 +1,1 @@
-export * from './update-logger';
+export * from "./update-logger";
