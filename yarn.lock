@@ -222,10 +222,10 @@
   dependencies:
     abort-controller "^3.0.0"
 
-"@grammyjs/types@3.4.6":
-  version "3.4.6"
-  resolved "https://registry.yarnpkg.com/@grammyjs/types/-/types-3.4.6.tgz#a79a97695b7c96fb84a0113c75495a1e3c9589b8"
-  integrity sha512-J7xb4JFmdTG2JXDirytp9KuUBKhzT8cAeB3tg2dyWy0VzF/Pdi1t8YaBmNsGeL6VvdvAXHtBTfzrc3jBTD2Kuw==
+"@grammyjs/types@3.18.0":
+  version "3.18.0"
+  resolved "https://registry.yarnpkg.com/@grammyjs/types/-/types-3.18.0.tgz#2f6f474e29e0a1a96883fb93e6d97a8e77f45bde"
+  integrity sha512-/VpQcT6Z0+Lw6H6jv2JvnDmqB1/9rjbFdDBlPBPUW3kQ1bWfjzfaiVk2+J2eiid3o3sLaPp3ZK0XjEI1gWNc3g==
 
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.14"
@@ -964,12 +964,12 @@ globby@^11.0.4:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-grammy@^1.20.3:
-  version "1.20.4"
-  resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.20.4.tgz#b42655965c9dc15a9bf21b8c80c5fbb5d81d0a83"
-  integrity sha512-9BqBOcpQpDzGOUmjdXZKqFWVRqY+ZkWAhkYU1YiDq90a+yOIIoQbjWt8rip6zRE4ePoLhHG5Rq7QLk90sshNiw==
+grammy@^1.34.0:
+  version "1.34.0"
+  resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.34.0.tgz#a826feb5e91f88041a9c91b7f60fff2523176c3f"
+  integrity sha512-YSLUSLdwycufB0Si9em+Ef3aXt7Vq0LYuGgwF4+ZskPb6+3RzrPdkh28qQNKhCeIXKodgMKQ5CxAHf/fLJZufg==
   dependencies:
-    "@grammyjs/types" "3.4.6"
+    "@grammyjs/types" "3.18.0"
     abort-controller "^3.0.0"
     debug "^4.3.4"
     node-fetch "^2.7.0"
